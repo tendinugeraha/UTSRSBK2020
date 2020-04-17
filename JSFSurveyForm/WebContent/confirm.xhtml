@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>JSF Form Example</title>
+</h:head>
+<h:body>
+<h4>Confirmation Screen</h4>
+  <h:form>
+    <h4>Employee Information System</h4>
+    <table>
+      <tr>
+        <td>Nama Depan:</td>
+        <td>
+          <h:outputText value="#{formBean.namaDepan}" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Nama Blkg:</td>
+        <td>
+          <h:outputText value="#{formBean.namaBlkg}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>alamat Jalan:</td>
+        <td>
+          <h:outputText value="#{formBean.alamatJalan}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>alamat kota:</td>
+        <td>
+          <h:outputText value="#{formBean.alamatKota}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>alamat ngrbagian:</td>
+        <td>
+          <h:outputText value="#{formBean.alamatNgrbagian}" />
+        </td>
+      </tr>
+
+
+<tr>
+        <td>alamat Pos:</td>
+        <td>
+          <h:outputText value="#{formBean.alamatPos}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>nomor telepon</td>
+        <td>
+          <h:outputText value="#{formBean.nomorTelepon}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>Email Address:</td>
+        <td>
+          <h:outputText value="#{formBean.emailAddress}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>tanggal survey</td>
+        <td>
+          <h:outputText value="#{formBean.tanggalSurvey}" />
+        </td>
+      </tr>
+
+
+<tr>
+        <td>disukai</td>
+        <td>
+          <h:outputText value="#{formBean.cbDisukai}" />
+        </td>
+      </tr>
+<tr>
+        <td>rbTertarik</td>
+        <td>
+          <h:outputText value="#{formBean.rbTertarik}" />
+        </td>
+      </tr>
+
+<tr>
+        <td>ddRekomendasi</td>
+        <td>
+          <h:outputText value="#{formBean.ddRekomendasi}" />
+        </td>
+      </tr>
+<tr>
+
+
+        <td>komentar tambahan</td>
+        <td>
+          <h:outputText value="#{formBean.komentarTambahan}" />
+        </td>
+      </tr>
+
+
+      
+    </table>
+
+    <p><h:commandButton value="Cancel" action="form" />
+    <h:commandButton value="Confirm" action="#{formBean.storeEmployeeInfo}" /></p>
+  </h:form>
+ </h:body>
+</html>

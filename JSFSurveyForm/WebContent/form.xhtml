@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://java.sun.com/jsf/html">      
+<h:head>
+  <title>Formulir Survei Siswa</title>
+  <h:outputStylesheet name="css/style.css"/>
+  <style>
+
+</style>
+</h:head>
+ 
+<h:body>
+<div id="header">
+Formulir Survei Siswa
+</div>
+
+<div id ="section">
+
+<div id="article">
+<h:form>
+<table>
+      <tr>
+        <td>Nama Depan : </td>
+        <td>
+          <h:inputText label="Nama Depan"
+                       id="namadepan" value="#{formBean.namaDepan}"
+                       required="true"/>
+                       <h:message for="namadepan" style="color: red"/>
+        </td>
+      </tr>
+ 
+       <tr>
+        <td>Nama Belakang : </td>
+        <td>
+          <h:inputText label="Nama Belakang"
+                       id="namablkg" value="#{formBean.namaBlkg}"
+                       required="true"/>
+                       <h:message for="namablkg" style="color: red"/>
+        </td>
+      </tr>
+       <tr>
+        <td>Alamat Jalan : </td>
+        <td>
+          <h:inputText label="Alamat Jalan"
+                       id="alamatjalan" value="#{formBean.alamatJalan}"
+                       required="true"/>
+                       <h:message for="alamatjalan" style="color: red"/>
+        </td>
+      </tr>
+
+       <tr>
+        <td>Alamat Kota : </td>
+        <td>
+          <h:inputText label="Alamat Kota"
+                       id="alamatkota" value="#{formBean.alamatKota}"
+                       required="true"/>
+                       <h:message for="alamatkota" style="color: red"/>
+        </td>
+      </tr>
+
+       <tr>
+        <td>Alamat Negara Bagian : </td>
+        <td>
+          <h:inputText label="Alamat Negara Bagian"
+                       id="alamatngrbagian" value="#{formBean.alamatNgrbagian}"
+                       required="true"/>
+                       <h:message for="alamatngrbagian" style="color: red"/>
+        </td>
+      </tr>
+
+       <tr>
+        <td>Alamat Pos : </td>
+        <td>
+          <h:inputText label="Alamat Pos"
+                       id="alamatpos" value="#{formBean.alamatPos}"
+                       required="true"/>
+                       <h:message for="alamatpos" style="color: red"/>
+        </td>
+      </tr>
+
+       <tr>
+        <td>Nomor Telepon: </td>
+        <td>
+          <h:inputText label="Nomor Telepon"
+                       id="nomortelepon" value="#{formBean.nomorTelepon}"
+                       required="true"/>
+                       <h:message for="nomortelepon" style="color: red"/>
+        </td>
+      </tr>
+
+       <tr>
+        <td>Email Address : </td>
+        <td>
+          <h:inputText label="Email Address"
+                       id="emailaddress" value="#{formBean.emailAddress}"
+                       required="true"/>
+                       <h:message for="emailaddress" style="color: red"/>
+        </td>
+      </tr>
+      
+
+<tr>
+        <td>Tanggal Survey :</td>
+        <td>
+          <h:inputText label="Tanggal Survey"
+                       id="tanggalsurvey" value="#{formBean.tanggalSurvey}" required="true">
+            <f:convertDateTime pattern="MM-dd-yy" />
+          </h:inputText> (mm-dd-yy)
+          <h:message for="tanggalsurvey" style="color: red"/>
+        </td>
+      </tr>
+
+<tr>
+        
+      </tr>
+
+<tr>
+        <td>Yg paling disukai :</td>
+        <td>
+          <h:selectOneRadio label="cbdisukai"
+                            id="cbdisukai" value="#{formBean.cbDisukai}" required="true">
+            <f:selectItem itemLabel="Siswa" itemValue="siswa" />
+            <f:selectItem itemLabel="Lokasi" itemValue="lokasi" />
+            <f:selectItem itemLabel="Kampus" itemValue="kampus" />
+            <f:selectItem itemLabel="Suasana" itemValue="suasana" />
+             <f:selectItem itemLabel="Kamar" itemValue="kamar" />
+            <f:selectItem itemLabel="Olahraga" itemValue="olahraga" />
+          </h:selectOneRadio>
+        <h:message for="cbdisukai" style="color: red"/>             
+        </td>
+      </tr>
+      
+<tr>
+        <td>rbTertarik :</td>
+        <td>
+          <h:selectOneRadio label="rbtertarik"
+                            id="rbtertarik" value="#{formBean.rbTertarik}" required="true">
+            <f:selectItem itemLabel="Teman" itemValue="teman" />
+            <f:selectItem itemLabel="Televisi" itemValue="televisi" />
+            <f:selectItem itemLabel="Internet" itemValue="internet" />
+            <f:selectItem itemLabel="Lainnya" itemValue="lainnya" />
+            
+          </h:selectOneRadio>
+        <h:message for="rbtertarik" style="color: red"/>             
+        </td>
+      </tr>
+
+<tr>
+        <td>ddRekomendasi</td>
+        <td>
+          <h:selectOneMenu label="ddrekomendasi"
+                           value="#{formBean.ddRekomendasi}">
+            <f:selectItem itemLabel="Sangat Mungkin" itemValue="sangatmungkin" />
+            <f:selectItem itemLabel="Mungkin" itemValue="mungkin" />
+            <f:selectItem itemLabel="Tidak Mungkin" itemValue="tidakmungkin" />
+          </h:selectOneMenu>
+        </td>
+      </tr>
+
+<tr>
+        <td>Komentar Tambahan : </td>
+        <td>
+          <h:inputTextarea cols="14" rows ="4" style="width:150" label="Komentar Tambahan"
+                       id="komentartambahan" value="#{formBean.komentarTambahan}"
+                       required="true"/>
+        </td>
+      </tr>
+      
+      
+     
+
+   
+   		
+    </table>
+    
+
+
+    <p><h:commandButton value="Submit" action="confirm" /></p>
+  </h:form>
+
+    </div>
+</div>
+        
+<div id="footer">
+  <p>Footer</p>
+</div>  
+</h:body>
+</html>
